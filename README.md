@@ -1,4 +1,2 @@
-grayleonard.github.com
-======================
-
-site
+grayleonard.github.io
+=====================
