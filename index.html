@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gray Works</title>
+  <link rel=stylesheet href="style.css" type="text/css">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+
+var randColor = function() {
+	return '#'+Math.floor(Math.random()*16777215).toString(16);
+}
+
+var randFont = function() {
+	var fonts = ["futura", "times new roman", "comic sans", "impact", "courier new", "tahoma", "lucida grande"];
+	return fonts[Math.floor(Math.random() * fonts.length)];
+}
+
+var randTrans = function() {
+	var transforms = ['uppercase', 'lowercase', 'capitalize', 'none'];
+	return transforms[Math.floor(Math.random() * transforms.length)];
+}
+
+var randDeco = function() {
+	var decorations = ['overline', 'line-through', 'underline', 'none'];
+	return decorations[Math.floor(Math.random() * decorations.length)];
+}
+
+var applyRandCss = function(item) {
+	switch(Math.floor(Math.random() * 5) + 1) {
+		case 1:
+			$(item).css("color", randColor());
+			break;
+		case 2:
+			$(item).css("font-family", randFont());
+			break;
+		case 3:
+			$(item).css("font-size", 15 + Math.floor(Math.random() * 10));
+			break;
+		case 4: 
+			$(item).css("text-transform", randTrans());
+			break;
+		case 5:
+			$(item).css("text-decoration", randDeco());
+			break;
+	}
+}
+
+setInterval(function() {
+	var list = $("a, h1, h2, h3").toArray();
+	var len  = list.length;
+	var ran  = Math.floor(Math.random()*len);
+	var item = list[ran];
+	applyRandCss(item);
+}, 70);
+
+</script>
+
+
+  <div id="container">
+    <div id="header">
+      <a href="#"><h1>Gray L.</h1></a>
+      <div id="menu">
+        <a href="http://github.com/grayleonard">Github</a>
+        <a href="http://twitter.com/666glen666">Twitter</a>
+      </div>
+    </div>
+    <div id="content">
+      <div id="websites">
+        <h3>Websites</h3>
+        <div id="sitelist">
+         
+            <div class="siteentry">
+              <a class="sitelink" href="http://stuffmypipe.com">
+                <img src="stuffmypipe.jpeg" width="200px" height="200px">
+              </a>
+            </div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://thepainterandmatisse.com">
+                <img src="painterandmatisse.jpeg" width="200px" height="200px">
+              </a>
+            </div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://picassoweeping.com">
+                <img src="picassoweeping.jpeg" width="200px" height="200px">
+              </a>
+          </div>
+		<div class="siteentry">
+			<a class="sitelink" href="http://impressionsunset.com">
+				<img src="monet-sunset.png" width="200px" height="200px">
+			</a>
+		</div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://staatliches-bau.haus">
+                <img src="bauhaus.png" width="200px" height="200px">
+              </a>
+          </div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://irrationali.tv">
+                <img src="irrationalitv.png" width="200px" height="200px">
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="software" class="category">
+          <h3>Software</h3>
+          <ul>
+            <li>
+              <a class="sitelink" href="http://github.com/grayleonard/termwallet">termWallet</a>
+            </li>
+            <li>
+              <a class="sitelink" href="http://github.com/grayleonard/youtube-upload-cli">youtube-upload-cli</a>
+            </li>
+            <li>
+              <a class="sitelink" href="http://github.com/grayleonard/node-youtube-resumable-upload">node-youtube-resumable-upload</a> <a href="http://npmjs.org/package/node-youtube-resumable-upload">(npm)</a>
+            </li>
+            <li>
+              <a class="sitelink" href="http://github.com/grayleonard/node-fuzzy-scp-client">node-fuzzy-scp-client</a> & <a class="sitelink" href="http://github.com/grayleonard/node-fuzzy-scp-server">server</a>
+            </li>
+          </ul>
+        </div>
+        <div id="assorted" class="category">
+          <h3>Physical</h3>
+          <ul>
+            <li>
+              <a class="sitelink" href="ex-military.pdf">exmilitary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

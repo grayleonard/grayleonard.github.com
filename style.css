@@ -1,0 +1,107 @@
+html, body {
+  background-color: #fff;
+  font-family: "futura";
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+
+h1 {
+  display: inline;
+}
+
+h3 {
+  margin-left: -5px;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0 0 0 0;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+img {
+  width: auto;
+}
+
+#header {
+  text-align: left;
+  padding-left:3em;
+  padding-bottom:1em;
+  border-bottom: 2px solid #000;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#menu {
+  display: inline;
+  margin-left: 4em;
+}
+
+#menu a {
+  margin-right: 4em;
+  color: #000000;
+  text-decoration: none;
+}
+
+#container {
+  background-color: #FFFFFF;
+  margin:0 auto;
+  height: 96%;
+  min-width: 200px;
+  max-width: 1000px;
+  padding-top: 1em;
+  text-align: center;
+}
+
+#content {
+  text-align: left;
+  background-color: #FFFFFF;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin-right: 75px;
+  margin-left: 75px;
+  min-width: 200px;
+  max-width: 1000px;
+}
+
+#websites {
+}
+
+.row {
+  padding-right: 5px;
+  float: left;
+
+}
+
+.row a {
+  text-decoration:none;
+}
+
+.siteentry {
+  width:auto;
+  display: inline;
+  overflow: hidden;
+}
+#software {
+  min-width: 410px;
+  float: left;
+}
+
+#assorted {
+  width:200px;
+  float: left;
+  height: 170px;
+}
+
+#software a, #assorted a {
+  text-decoration:underline;
+}
