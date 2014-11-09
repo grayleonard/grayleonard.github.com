@@ -91,6 +91,12 @@ img {
   display: inline;
   overflow: hidden;
 }
+
+.siteimg {
+  width: 150px;
+  height: 150px;
+}
+
 #software {
   min-width: 410px;
   float: left;
