@@ -23,13 +23,22 @@ var randTrans = function() {
 	return transforms[Math.floor(Math.random() * transforms.length)];
 }
 
+var randStyle = function() {
+	var styles = ['normal', 'italic'];
+	return styles[Math.floor(Math.random() * styles.length)];
+}
+
+var randWeight = function() {
+	return (Math.floor(Math.random() * 10)) * 100;
+}
+
 var randDeco = function() {
 	var decorations = ['overline', 'line-through', 'underline', 'none'];
 	return decorations[Math.floor(Math.random() * decorations.length)];
 }
 
 var applyRandCss = function(item) {
-	switch(Math.floor(Math.random() * 5) + 1) {
+	switch(Math.floor(Math.random() * 7) + 1) {
 		case 1:
 			$(item).css("color", randColor());
 			break;
@@ -44,6 +53,12 @@ var applyRandCss = function(item) {
 			break;
 		case 5:
 			$(item).css("text-decoration", randDeco());
+			break;
+		case 6:
+			$(item).css("text-style", randStyle());
+			break;
+		case 7:
+			$(item).css("text-weight", randWeight());
 			break;
 	}
 }
