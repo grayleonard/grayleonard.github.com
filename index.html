@@ -63,6 +63,18 @@ var applyRandCss = function(item) {
 	}
 }
 
+var applyRandImgCss = function(img) {
+	var deg_range = 20;
+	var rand_degree = Math.floor(Math.random()*deg_range);
+	var rotate_string = "rotate(" + rand_degree + "deg)";
+	$(img).css("-webkit-transform", rotate_string)
+	.css("-moz-transform", rotate_string)
+	.css("-ms-transform", rotate_string)
+	.css("-o-transform", rotate_string)
+	.css("transform", rotate_string);
+}
+
+
 setInterval(function() {
 	var list = $("a, h1, h2, h3").toArray();
 	var len  = list.length;
@@ -70,6 +82,14 @@ setInterval(function() {
 	var item = list[ran];
 	applyRandCss(item);
 }, 70);
+
+setInterval(function() {
+	var img_list = $("img").toArray();
+	var img_len  = img_list.length;
+	var img_ran  = Math.floor(Math.random()*img_len);
+	var img      = img_list[img_ran];
+	applyRandImgCss(img);
+}, 100);
 
 </script>
 
