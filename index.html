@@ -75,6 +75,12 @@ var applyRandImgCss = function(img) {
 	.css("transform", rotate_string);
 }
 
+var applyRandBorder = function() {
+	var width = Math.floor(Math.random() * 1) + 2; // for future changes
+	var type = ['solid', 'dashed', 'dotted'][Math.floor(Math.random() * 3)];
+	console.log(width + type + ' ' +randColor());
+	$('#header').css('border-bottom', ' ' + width + 'px ' + type + ' ' +randColor());
+};
 
 setInterval(function() {
 	var list = $("a, h1, h2, h3").toArray();
@@ -91,6 +97,10 @@ setInterval(function() {
 	var img      = img_list[img_ran];
 	applyRandImgCss(img);
 }, 100);
+
+setInterval(function() { 
+	applyRandBorder();
+}, 150);
 
 </script>
 
