@@ -81,23 +81,23 @@ var applyRandBorder = function() {
 	console.log(width + type + ' ' +randColor());
 	$('#header').css('border-bottom', ' ' + width + 'px ' + type + ' ' +randColor());
 };
-/*
+
 setInterval(function() {
-	var list = $("a, h1, h2, h3").toArray();
+	var list = $(".change_this").toArray();
 	var len  = list.length;
-	var ran  = Math.floor(Math.random()*len);
+	var ran  = Math.floor(Math.random()*len+1);
 	var item = list[ran];
 	applyRandCss(item);
 }, 70);
 
 setInterval(function() {
-	var img_list = $("img").toArray();
+	var img_list = $(".change_this").toArray();
 	var img_len  = img_list.length;
-	var img_ran  = Math.floor(Math.random()*img_len);
+	var img_ran  = Math.floor(Math.random()*img_len+1);
 	var img      = img_list[img_ran];
 	applyRandImgCss(img);
 }, 100);
-
+/*
 setInterval(function() { 
 	applyRandBorder();
 }, 150);
@@ -106,8 +106,8 @@ setInterval(function() {
 
 
   <div id="container">
-    <div id="header">
-      <a href="#"><h1>Gray L</h1></a>
+    <div id="header" >
+      <a href="#" class="change_this"><h1 class="change_this">Gray L</h1></a>
       <div id="menu">
         <a href="http://github.com/grayleonard">Github</a>
         <a href="https://american.academia.edu/GrayLeonard">Academia</a>
