@@ -1,130 +1,45 @@
 <!DOCTYPE html>
+<meta charset="utf8">
 <html>
 <head>
-  <title>Gray Leonard</title>
+  <title>gray leonard</title>
   <link rel=stylesheet href="style.css" type="text/css">
 </head>
 <body>
-
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script>
-
-var randColor = function() {
-	return '#'+Math.floor(Math.random()*16777215).toString(16);
-}
-
-var randFont = function() {
-	var fonts = ["futura", "times new roman", "comic sans", "impact", "courier new", "tahoma", "lucida grande"];
-	return fonts[Math.floor(Math.random() * fonts.length)];
-}
-
-var randTrans = function() {
-	var transforms = ['uppercase', 'lowercase', 'capitalize', 'none'];
-	return transforms[Math.floor(Math.random() * transforms.length)];
-}
-
-var randStyle = function() {
-	var styles = ['normal', 'italic'];
-	return styles[Math.floor(Math.random() * styles.length)];
-}
-
-var randWeight = function() {
-	return (Math.floor(Math.random() * 10)) * 100;
-}
-
-var randDeco = function() {
-	var decorations = ['overline', 'line-through', 'underline', 'none'];
-	return decorations[Math.floor(Math.random() * decorations.length)];
-}
-
-var applyRandCss = function(item) {
-	switch(Math.floor(Math.random() * 7) + 1) {
-		case 1:
-			$(item).css("color", randColor());
-			break;
-		case 2:
-			$(item).css("font-family", randFont());
-			break;
-		case 3:
-			$(item).css("font-size", 15 + Math.floor(Math.random() * 10));
-			break;
-		case 4: 
-			$(item).css("text-transform", randTrans());
-			break;
-		case 5:
-			$(item).css("text-decoration", randDeco());
-			break;
-		case 6:
-			$(item).css("text-style", randStyle());
-			break;
-		case 7:
-			$(item).css("text-weight", randWeight());
-			break;
-	}
-}
-
-var applyRandImgCss = function(img) {
-	var deg_range = 90;
-	var rand_degree = Math.floor(Math.random()*deg_range);
-	rand_degree = (Math.random() > .5) ? -rand_degree : rand_degree;
-	var rotate_string = "rotate(" + rand_degree + "deg)";
-	$(img).css("-webkit-transform", rotate_string)
-	.css("-moz-transform", rotate_string)
-	.css("-ms-transform", rotate_string)
-	.css("-o-transform", rotate_string)
-	.css("transform", rotate_string);
-}
-
-var applyRandBorder = function() {
-	var width = Math.floor(Math.random() * 1) + 2; // for future changes
-	var type = ['solid', 'dashed', 'dotted'][Math.floor(Math.random() * 3)];
-	console.log(width + type + ' ' +randColor());
-	$('#header').css('border-bottom', ' ' + width + 'px ' + type + ' ' +randColor());
-};
-
-setInterval(function() {
-	var list = $(".change_this").toArray();
-	var len  = list.length;
-	var ran  = Math.floor(Math.random()*len);
-	var item = list[ran];
-	applyRandCss(item);
-}, 70);
-
-setInterval(function() {
-	var img_list = $(".change_this").toArray();
-	var img_len  = img_list.length;
-	var img_ran  = Math.floor(Math.random()*img_len);
-	var img      = img_list[img_ran];
-	applyRandImgCss(img);
-}, 100);
-/*
-setInterval(function() { 
-	applyRandBorder();
-}, 150);
-*/
-</script>
-
-
   <div id="container">
     <div id="header" >
-	<div style="min-width:90px;display:inline-block;position:relative;">
-		<a href="#" class="change_this">Gray L</a>
+	<div class="logo">
+		<a href="#">gray</a>
 	</div>
       <div id="menu">
-        <a href="http://github.com/grayleonard">Github</a>
-        <a href="https://american.academia.edu/GrayLeonard">Academia</a>
+        <a href="http://github.com/grayleonard">github</a>
+        <a href="https://american.academia.edu/GrayLeonard">academia</a>
       </div>
     </div>
     <div id="content">
-      <div id="websites">
-        <h3>Websites</h3>
+      <div class="category">
+        <h3>sites</h3>
         <div id="sitelist">
-         
+            <div class="siteentry">
+              <a class="sitelink" href="http://ode-to-die-brucke.com">
+                <img class="siteimg" src="ode-to-die-brucke.jpg">
+              </a>
+            </div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://irrationali.tv">
+                <img class="siteimg" src="irrationalitv.png">
+              </a>
+            </div>
             <div class="siteentry">
               <a class="sitelink" href="http://stuffmypipe.com">
                 <img class="siteimg" src="stuffmypipe.jpeg">
               </a>
             </div>
+            <div class="siteentry">
+              <a class="sitelink" href="http://staatliches-bau.haus">
+                <img class="siteimg" src="bauhaus.png">
+              </a>
+          </div>
             <div class="siteentry">
               <a class="sitelink" href="http://thepainterandmatisse.com">
                 <img class="siteimg" src="painterandmatisse.jpeg">
@@ -135,61 +50,50 @@ setInterval(function() {
                 <img class="siteimg" src="picassoweeping.jpeg">
               </a>
           </div>
-		<div class="siteentry">
-			<a class="sitelink" href="http://impressionsunset.com">
-				<img class="siteimg" src="monet-sunset.png">
-			</a>
-		</div>
-            <div class="siteentry">
-              <a class="sitelink" href="http://staatliches-bau.haus">
-                <img class="siteimg" src="bauhaus.png">
-              </a>
-          </div>
-            <div class="siteentry">
-              <a class="sitelink" href="http://irrationali.tv">
-                <img class="siteimg" src="irrationalitv.png">
-              </a>
-            </div>
-            <div class="siteentry">
-              <a class="sitelink" href="http://ode-to-die-brucke.com">
-                <img class="siteimg" src="ode-to-die-brucke.jpg">
-              </a>
-            </div>
 
         </div>
       </div>
       <div class="row">
-        <div id="software" class="category">
-          <h3>Software</h3>
+        <div class="category">
+          <h3>code</h3>
           <ul>
             <li>
-              <a class="sitelink" href="http://github.com/grayleonard/interpellate">Interpellate (JS Obfuscation)</a>
+		    <a class="sitelink" href="http://github.com/grayleonard/booxtream-epub-drm-remover">booxtream drm remover</a>
+	    </li>
+	    <li>
+              <a class="sitelink" href="http://github.com/grayleonard/interpellate">interpellate</a>
             </li>
             <li>
-              <a class="sitelink" href="http://github.com/grayleonard/node-youtube-resumable-upload">node-youtube-resumable-upload</a> <a href="http://npmjs.org/package/node-youtube-resumable-upload">(npm)</a>
+              <a class="sitelink" href="http://github.com/grayleonard/node-youtube-resumable-upload">youtube resumable upload</a>
             </li>
             <li>
-              <a class="sitelink" href="http://github.com/grayleonard/termwallet">termWallet</a>
+              <a class="sitelink" href="http://github.com/grayleonard/termwallet">termwallet</a>
             </li>
             <li>
               <a class="sitelink" href="http://github.com/grayleonard/youtube-upload-cli">youtube-upload-cli</a>
             </li>
-            <li>
-              <a class="sitelink" href="http://github.com/grayleonard/node-fuzzy-scp-client">node-fuzzy-scp-client</a> & <a class="sitelink" href="http://github.com/grayleonard/node-fuzzy-scp-server">server</a>
-            </li>
           </ul>
         </div>
-        <div id="assorted" class="category">
-          <h3>Other</h3>
+        <div class="category">
+          <h3>misc</h3>
           <ul>
             <li>
-              <a class="sitelink" href="http://exmilitai.re">Exmilitary</a>
+              <a class="sitelink" href="http://exmilitai.re">exmilitary</a>
             </li>
             <li>
-              <a class="sitelink" href="http://macrocristalina.com">macrocristalina.com</a>
+              <a class="sitelink" href="http://onlineartrights.com">online art rights</a>
+            </li>
+            <li>
+              <a class="sitelink" href="http://macrocristalina.com">paz monge</a>
+            </li>
+            <li>
+              <a class="sitelink" href="http://hudson-brown.com">hudson brown</a>
             </li>
           </ul>
         </div>
+    <div id="footer">
+	    <span><a href="mailto:gl7039a+hi@american.edu">⇾ contact</a></span>
+    </div>
       </div>
     </div>
   </div>

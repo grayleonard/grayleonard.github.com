@@ -1,23 +1,22 @@
 html, body {
   background-color: #fff;
-  font-family: "futura";
+  font-family: "helvetica neue", verdana;
+  font-weight: 300;
+  font-size: 14px;
   margin:0;
   padding:0;
   height: 100%;
-  overflow-x:hidden;
-}
-
-h1 {
-  display: inline;
+  overflow-x: auto; 
+  overflow-y: hidden;
 }
 
 h3 {
-  margin-left: -5px;
+  font-weight: 300;
 }
 
 a {
-  color: #000000;
-  text-decoration: underline;
+  color: black;
+  text-decoration: none;
 }
 
 ul {
@@ -26,92 +25,102 @@ ul {
   padding-left: 0;
 }
 
+li {
+	list-style: none;
+	margin-bottom: 10px;
+	padding-left: 5px;
+}
+
+li:before {
+	content: "⇾  ";
+	margin-right: 2px;
+}
+
 img {
   width: auto;
 }
 
-#header {
-  text-align: left;
-  padding-left:3em;
-  padding-bottom:1em;
-  border-bottom: 2px solid #000;
-  height: 30px;
+#container {
+	background-color: #FFFFFF;
+	margin:0 auto;
+	max-width: 400px;
+	text-align: center;
 }
 
-#header a {
-  text-decoration: none;
+
+#header {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	margin-top: 50px;
+	padding-bottom:1em;
+	border-bottom: 1px solid #000;
+}
+
+#header .logo {
+	display:inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: 300;
 }
 
 #menu {
-  display: inline-block;
-  margin-left: 4em;
-  padding-top:10px;
-  position:relative;
+	display: inline-block;
+	margin-left: 1em;
+	position:relative;
 }
 
 #menu a {
-  margin-right: 2em;
-  color: #000000;
-  text-decoration: none;
+	margin-right: 2em;
+	padding-left: 5px;
 }
 
-#container {
-  background-color: #FFFFFF;
-  margin:0 auto;
-  height: 96%;
-  min-width: 200px;
-  max-width: 1000px;
-  padding-top: 1em;
-  text-align: center;
+#menu a:before {
+	content: "⇾ ";
+	margin-right: 2px;
 }
 
 #content {
-  text-align: left;
-  background-color: #FFFFFF;
-  display: inline-block;
-  right: 0;
-  left: 0;
-  margin-right: 75px;
-  margin-left: 75px;
-  min-width: 200px;
-  max-width: 1000px;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	background-color: #F6F6F6;
+	padding-bottom: 20px;
 }
 
-#websites {
+.category {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .row {
-  padding-right: 5px;
-  float: left;
+	padding-right: 5px;
+	float: left;
 
 }
 
 .row a {
-  text-decoration:none;
+	text-decoration:none;
 }
 
 .siteentry {
-  width:auto;
-  display: inline;
-  overflow: hidden;
+	display: inline;
+	width:auto;
+}
+
+.sitelink {
+	text-decoration: none;
 }
 
 .siteimg {
-  width: 150px;
-  height: 150px;
+	width: 50px;
+	height: 50px;
 }
 
-#software {
-  min-width: 410px;
-  float: left;
-}
+#footer {
+	margin-top: 20px;
+	padding-top: 10px;
+	margin-left: 20px;
+	border-top: 1px solid #888888;
 
-#assorted {
-  width:200px;
-  float: left;
-  height: 170px;
-}
-
-#software a, #assorted a {
-  text-decoration:underline;
 }
