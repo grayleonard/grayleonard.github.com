@@ -53,8 +53,7 @@ img {
 	width: 100%;
 	text-align: left;
 	margin-top: 50px;
-	padding-bottom:1em;
-	border-bottom: 1px solid #000;
+	padding-bottom:2em;
 }
 
 #header .logo {
@@ -84,8 +83,9 @@ img {
 	display: inline-block;
 	width: 100%;
 	text-align: left;
-	background-color: #F6F6F6;
+	background-color: #F7F7F7;
 	padding-bottom: 20px;
+	box-shadow: 0px 0px 30px 10px #f7f7f7;
 }
 
 .category {
