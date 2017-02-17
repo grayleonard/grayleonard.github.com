@@ -1,20 +1,35 @@
+@font-face {
+	font-family: "bau";
+	src: url("bau.woff") format("woff");
+}
+
+@font-face {
+	font-family: "bau";
+	src: url("bau-medium.woff") format("woff");
+	font-weight: bold;
+}
+
 html, body {
-  background-color: #fff;
-  font-family: "helvetica neue", verdana;
+  background-color: #f5f5f5;
+  font-family: "bau", verdana;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 1px;
   margin:0;
   padding:0;
   height: 100%;
   overflow-x: auto; 
-  overflow-y: hidden;
 }
 
 h3 {
-  font-weight: 300;
+	color: #f5f5f5;
+  margin: 0;
+  padding: 30px 0 0 30px;
+  font-weight: 700;
 }
 
 a {
+  padding: 5px;
   color: black;
   text-decoration: none;
 }
@@ -31,7 +46,7 @@ li {
 	padding-left: 5px;
 }
 
-li:before {
+a:before {
 	content: "⇾  ";
 	margin-right: 2px;
 }
@@ -41,19 +56,24 @@ img {
 }
 
 #container {
-	background-color: #FFFFFF;
 	margin:0 auto;
-	max-width: 400px;
+	max-width: 450px;
 	text-align: center;
 }
 
+.logo a:before {
+	content: "";
+	margin: 0;
+}
 
 #header {
+	font-size: 19px;
 	display: inline-block;
 	width: 100%;
-	text-align: left;
-	margin-top: 50px;
-	padding-bottom:2em;
+	text-align: center;
+	margin-top: 30px;
+	padding-bottom: 10px;
+	margin-bottom:1em;
 }
 
 #header .logo {
@@ -83,14 +103,31 @@ img {
 	display: inline-block;
 	width: 100%;
 	text-align: left;
-	background-color: #F7F7F7;
 	padding-bottom: 20px;
-	box-shadow: 0px 0px 30px 10px #f7f7f7;
 }
 
 .category {
-	padding-left: 20px;
-	padding-right: 20px;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	margin: 10px 0 10px 0;
+}
+
+.category--left {
+	height: 100%;
+	float: left;
+	display: block;
+	color: white;
+	background-color: black;
+	width: 35%;
+}
+
+.category--right {
+	border: 2px solid black;
+	background-color: white;
+	padding: 30px 20px 30px 20px;
+	width: calc(65% - 44px);
+	display: inline-block;
 }
 
 .row {
@@ -99,13 +136,27 @@ img {
 
 }
 
-.row a {
-	text-decoration:none;
+#sitelist {
+	width: 165px;
 }
 
 .siteentry {
 	display: inline;
 	width:auto;
+}
+
+.siteentry .sitelink:before {
+	content: "" !important;
+	margin-right: 0 !important;
+}
+
+.siteentry .sitelink {
+	padding: 0;
+}
+
+a:hover {
+	background-color: black;
+	color: white;
 }
 
 .sitelink {
@@ -118,9 +169,9 @@ img {
 }
 
 #footer {
+	font-size: 20px;
 	margin-top: 20px;
 	padding-top: 10px;
-	margin-left: 20px;
-	border-top: 1px solid #888888;
+	border-top: 2px solid black;
 
 }
