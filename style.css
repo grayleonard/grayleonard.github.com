@@ -9,53 +9,61 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: "korp";
+	src: url("Korpus-Grotesk-B.woff") format("woff");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "korp";
+	src: url("Korpus-Grotesk-C.woff2") format("woff");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "korp";
+	src: url("Korpus-Grotesk-D.woff") format("woff");
+	font-weight: 600;
+}
+
 html, body {
 	background-color: rgba(0,0,0,0);
-	font-family: "bau", verdana;
-	font-size: 20px;
-	font-weight: 300;
-	letter-spacing: 1px;
+	font-family: "korp", verdana;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 2px;
 	margin:0;
 	padding:0;
 	overflow: hidden; 
-}
-
-h3 {
-	display: block;
-	color: white;
-	margin: 0;
-	padding: 30px 0 0 30px;
-	font-weight: 700;
-	font-size: 25px;
+	color: black;
+	width: 100%;
 }
 
 a {
-	padding: 5px;
-	color: white;
 	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid black;
 }
 
-ul {
+a:hover {
+	border-bottom: 2px solid black;
 }
 
-li {
-	list-style: none;
-	margin-bottom: 10px;
-	padding-left: 5px;
-}
-
-img {
-	width: auto;
+.pastel {
+	z-index: 1;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #EEF2F5;
 }
 
 #container {
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	margin-left: 100px;
+	z-index: 2;
+	position: relative;
+	width: fit-content;
 	height: 100%;
-	overflow: scroll;
+	margin: 0 auto;
 }
 
 #header {
@@ -65,77 +73,30 @@ img {
 	margin-bottom:1em;
 }
 
-#header .logo {
-	display: block;
-	font-weight: 300;
-}
-
-#menu {
-	margin-top: 20px;
-	display: block;
-}
-
-#menu a {
-}
-
 #content {
-	display: block;
-	width: 100%;
 	text-align: left;
-	padding-bottom: 20px;
-}
-
-.category {
-	height: 100%;
-	width: 100%;
-	margin: 10px 0 10px 0;
-}
-
-.category--left {
-	display: block;
-}
-
-.category--right {
-	display: block;
-}
-
-.row {
-	padding-right: 5px;
-	float: left;
-
-}
-
-.siteentry {
-	display: inline;
-	width:auto;
-}
-
-a:hover {
 	background-color: white;
-	color: black;
-}
-.siteentry .sitelink:before {
-	content: "" !important;
-	margin-right: 0 !important;
+	padding: 40px;
 }
 
-.siteentry .sitelink {
-	padding: 0;
-}
-
-
-.sitelink {
-	text-decoration: none;
-}
-
-.siteimg {
-	width: 50px;
-	height: 50px;
+#content > * {
+	display: block;
+	padding: 5px;
+	background-color: white;
 }
 
 #footer {
-	margin-top: 20px;
-	padding-top: 10px;
-	padding-bottom: 90px;
+	background-color: white;
+}
 
+.disclaimer {
+	font-size: 16px;
+	padding: 5px;
+	margin: 10px;
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	background-color: white;
+	border: 1px solid black;
 }

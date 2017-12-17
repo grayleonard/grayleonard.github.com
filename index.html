@@ -1,127 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-       	<title>gray leonard</title>
-	<link rel=stylesheet href="style.css" type="text/css">
-</head>
-<style>
-	#automata {
-		width: 100%;
-		height: 100vh;
-	}
-</style>
-<body>
-  <canvas id="automata"></canvas>
-  <div id="container">
-    <div id="header" >
-	<div class="logo">
-		<b>
-			<a href="#">gray leonard</a>
-		</b>
-	</div>
-      <div id="menu">
-        <a href="http://github.com/grayleonard">github</a>
-        <a href="https://american.academia.edu/GrayLeonard">academia</a>
-      </div>
-    </div>
-    <div id="content">
-      <div class="category">
-	<div class="category--left">
-		<h3>art</h3>
-	</div>
-        <div class="category--right">
-        	      <ul>
-        	      	<li>
-        	      		<a class="sitelink" href="http://ode-to-die-brucke.com">
-        	      		 ode to die brucke
-        	      		</a>
-        	      	</li>
-        	      	<li>
-        	      		<a class="sitelink" href="http://irrationali.tv">
-        	      		irrationalitv
-        	      		</a>
-        	      	</li>
-        	      	<li>
-        	      		<a class="sitelink" href="http://stuffmypipe.com">
-        	      		stuff my pipe
-        	      		</a>
-        	      	</li>
-        	      	<li>
-        	      		<a class="sitelink" href="http://staatliches-bau.haus">
-        	      		staatliches bau.haus
-        	      		</a>
-        	      	</li>
-        	      	<li>
-        	      		<a class="sitelink" href="http://thepainterandmatisse.com">
-        	      		painter and matisse
-        	      		</a>
-        	      	</li>
-        	      	<li>
-        	      		<a class="sitelink" href="http://picassoweeping.com">
-        	      		picasso weeping
-        	      		</a>
-        	      	</li>
-        	      </ul>
-        </div>
-      </div>
-        <div class="category">
-          <div class="category--left">
-          	<h3>sites</h3>
-          </div>
-          <div class="category--right">
-          	<ul>
-          	  <li>
-          	    <a class="sitelink" href="http://ideebot.io">ideebot</a>
-          	  </li>
-          	  <li>
-          	    <a class="sitelink" href="http://felonyriot.com">felony riot</a>
-          	  </li>
-          	  <li>
-          	    <a class="sitelink" href="http://exmilitai.re">exmilitary</a>
-          	  </li>
-          	  <li>
-          	    <a class="sitelink" href="http://postwarbooks.com/on-war">postwar books</a>
-          	  </li>
-          	  <li>
-          	    <a class="sitelink" href="http://leonardfirm.com">leonard firm</a>
-          	  </li>
-          	  <li>
-          	    <a class="sitelink" href="http://macrocristalina.com">paz monge</a>
-          	  </li>
-          	</ul>
-          </div>
-        </div>
-        <div class="category">
-          <div class="category--left">
-          	<h3>code</h3>
-          </div>
-	  <div class="category--right">
-          <ul>
-            <li>
-		    <a class="sitelink" href="http://github.com/grayleonard/booxtream-epub-drm-remover">booxtream drm remover</a>
-	    </li>
-            <li>
-              <a class="sitelink" href="http://github.com/grayleonard/xvfb-record">xvfb record</a>
-            </li>
-	    <li>
-              <a class="sitelink" href="http://github.com/grayleonard/interpellate">interpellate</a>
-            </li>
-            <li>
-              <a class="sitelink" href="http://github.com/grayleonard/node-youtube-resumable-upload">youtube resumable upload</a>
-            </li>
-            <li>
-              <a class="sitelink" href="http://github.com/grayleonard/termwallet">termwallet</a>
-            </li>
-          </ul>
-        </div>
-</div>
-    <div id="footer">
-	    <span><a href="mailto:gkontakte@mailbox.org">contact</a></span>
-      </div>
-    </div>
-  </div>
-</body>
-<script src="cells.js"></script>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>gray leonard</title>
+		<link rel=stylesheet href="style.css" type="text/css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header" >
+			</div>
+			<div id="content">
+				<div class="logo">
+					gray leonard
+				</div>
+				<p>freelance full-stack developer</p>
+				<p>for hire</p>
+				<div>
+					<a href="http://github.com/grayleonard">github</a>
+					<a href="https://american.academia.edu/GrayLeonard">academia</a>
+				</div>
+				<span><a href="mailto:gkontakte@mailbox.org">contact</a></span>
+			</div>
+			<div id="footer">
+			</div>
+		</div>
+		<div class="disclaimer">c 2017</div>
+		<div class="pastel"></div>
+	</body>
+	<script>
+	var colors = ['#EEF2F5', '#E1EBF5', '#D5ECDC', '#F0E5EB', '#FBDFD8']
+	var idx = Math.floor(Math.random() * colors.length)
+	var ls = document.querySelectorAll('a')
+	ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
+setInterval(function() {
+	idx = Math.floor(Math.random() * colors.length)
+	document.querySelector('.pastel').style.backgroundColor = colors[idx]
+	var ls = document.querySelectorAll('a')
+	ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
+}, 5000)
+	</script>
 </html>
