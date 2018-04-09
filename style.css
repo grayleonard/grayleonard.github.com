@@ -30,7 +30,7 @@ html, body {
 	font-family: "korp", verdana;
 	font-size: 18px;
 	font-weight: 400;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin:0;
 	padding:0;
 	overflow: hidden; 
@@ -46,6 +46,8 @@ a {
 
 a:hover {
 	border-bottom: 2px solid black;
+	background-color: black;
+	color: white;
 }
 
 .pastel {
@@ -77,6 +79,7 @@ a:hover {
 	text-align: left;
 	background-color: white;
 	padding: 40px;
+	border: 1px solid black;
 }
 
 #content > * {
@@ -99,4 +102,29 @@ a:hover {
 	left: 10px;
 	background-color: white;
 	border: 1px solid black;
+}
+
+.columns {
+	display: flex !important;
+	flex-direction: row;
+}
+
+.columns > div {
+	padding: 30px;
+}
+
+.underline {
+	display: inline-block;
+	background: black;
+	color: white;
+	margin: 0 ;
+	padding: 5px;
+}
+
+.work {
+	margin-top: 45px;
+}
+
+.projects > a {
+	display: inline-block;
 }

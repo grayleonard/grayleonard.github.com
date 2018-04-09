@@ -19,25 +19,50 @@
 				<div>
 					<a href="http://github.com/grayleonard">github</a>
 					<a href="https://american.academia.edu/GrayLeonard">academia</a>
+					<a href="mailto:gkontakte@mailbox.org">contact</a>
 				</div>
-				<span><a href="mailto:gkontakte@mailbox.org">contact</a></span>
+				<div class="columns">
+					<div class="projects">
+						<p class="underline">projects</p>
+						<p><a href="http://picassoweeping.com">picassoweeping.com</a></p>
+						<p><a href="http://thepainterandmatisse.com/">thepainterandmatisse.com</a></p>
+						<p><a href="http://impressionsunset.com/">impressionsunset.com</a></p>
+						<p><a href="http://stuffmypipe.com">stuffmypipe.com</a></p>
+						<p><a href="http://staatliches-bau.haus/">staatliches-bau.haus</a></p>
+						<p><a href="http://ode-to-die-brucke.com">ode-to-die-brucke.com</a></p>
+						<p><a href="http://futurist-manifesto.com/">futurist-manifesto.com</a></p>
+					</div>
+					<div class="publishings">
+						<p class="underline">publishing</p>
+						<p><a href="http://exmilitai.re">exmilitary</a></p>
+						<p><a href="http://felonyriot.com">felony riot</a></p>
+						<p><a href="http://exmilitai.re/flatline.html">fisher - flatline constructs</a></p>
+					<div class="work">
+						<p class="underline">work</p>
+						<p><a href="https://github.com/grayleonard/booxtream-epub-drm-remover">booxtream drm remover</a>
+						<a href="https://torrentfreak.com/researchers-crack-social-drm-ebook-watermarks-160625/">(coverage)</a></p>
+						<p><a href="http://macrocristalina.com">paz monge</a></p>
+					</div>
+					</div>
+				</div>
 			</div>
 			<div id="footer">
 			</div>
 		</div>
-		<div class="disclaimer">c 2017</div>
+		<div class="disclaimer">c 2018</div>
 		<div class="pastel"></div>
 	</body>
 	<script>
-	var colors = ['#EEF2F5', '#E1EBF5', '#D5ECDC', '#F0E5EB', '#FBDFD8']
+	var colors = ['#E1EBF5', '#D5ECDC', '#F0E5EB', '#FBDFD8']
 	var idx = Math.floor(Math.random() * colors.length)
 	var ls = document.querySelectorAll('a')
 	ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
-setInterval(function() {
-	idx = Math.floor(Math.random() * colors.length)
 	document.querySelector('.pastel').style.backgroundColor = colors[idx]
-	var ls = document.querySelectorAll('a')
-	ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
-}, 5000)
+	setInterval(function() {
+		idx = Math.floor(Math.random() * colors.length)
+		document.querySelector('.pastel').style.backgroundColor = colors[idx]
+		var ls = document.querySelectorAll('a')
+		ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
+	}, 5000)
 	</script>
 </html>
