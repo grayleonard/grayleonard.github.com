@@ -7,24 +7,25 @@
 		<link rel=stylesheet href="style.css" type="text/css">
 	</head>
 	<body>
-		<div id="container">
+		<div class="container">
 			<div id="header" >
 			</div>
 			<div id="content">
-				<div class="logo">
-					gray leonard
-				</div>
-				<p>freelance full-stack developer</p>
-				<p>for hire</p>
-				<div>
-					<a href="http://github.com/grayleonard">github</a>
-					<a href="https://american.academia.edu/GrayLeonard">academia</a>
-					<a href="mailto:gkontakte@mailbox.org">contact</a>
+				<div class="top">
+					<div class="logo">
+						gray leonard
+					</div>
+					<p>freelance full-stack developer</p>
+					<p>for hire</p>
+					<div class="links">
+						<a href="http://github.com/grayleonard">github</a>
+						<a href="https://american.academia.edu/GrayLeonard">academia</a>
+						<a href="mailto:gkontakte@mailbox.org">contact</a>
+					</div>
 				</div>
 				<div class="columns">
 					<div class="projects">
-						<p class="underline">projects</p>
-						<p><a href="http://picassoweeping.com">picassoweeping.com</a></p>
+						<p class="underline">art</p>
 						<p><a href="http://thepainterandmatisse.com/">thepainterandmatisse.com</a></p>
 						<p><a href="http://impressionsunset.com/">impressionsunset.com</a></p>
 						<p><a href="http://stuffmypipe.com">stuffmypipe.com</a></p>
@@ -41,7 +42,9 @@
 						<p class="underline">work</p>
 						<p><a href="https://github.com/grayleonard/booxtream-epub-drm-remover">booxtream drm remover</a>
 						<a href="https://torrentfreak.com/researchers-crack-social-drm-ebook-watermarks-160625/">(coverage)</a></p>
+						<p><a href="https://github.com/grayleonard/mastodon-share">mastodon-share</a></p>
 						<p><a href="http://macrocristalina.com">paz monge</a></p>
+						<p><a href="http://leonardfirm.com">leonard firm</a></p>
 					</div>
 					</div>
 				</div>
@@ -49,6 +52,7 @@
 			<div id="footer">
 			</div>
 		</div>
+		<div class="floating-image"><img src="img-cropped.jpg" alt=""></div>
 		<div class="disclaimer">c 2018</div>
 		<div class="pastel"></div>
 	</body>
@@ -56,13 +60,13 @@
 	var colors = ['#E1EBF5', '#D5ECDC', '#F0E5EB', '#FBDFD8']
 	var idx = Math.floor(Math.random() * colors.length)
 	var ls = document.querySelectorAll('a')
-	ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
+	//ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
 	document.querySelector('.pastel').style.backgroundColor = colors[idx]
-	setInterval(function() {
+/*	setInterval(function() {
 		idx = Math.floor(Math.random() * colors.length)
 		document.querySelector('.pastel').style.backgroundColor = colors[idx]
 		var ls = document.querySelectorAll('a')
 		ls.forEach(function(l) { l.style.borderBottomColor = colors[idx]})
-	}, 5000)
+	}, 5000)*/
 	</script>
 </html>
